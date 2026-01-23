@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tairo - Discover Kattankudy's Finest Tailors</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="navbar-container">
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Tairo Logo">
+            <span>Tairo</span>
+        </a>
+
+        <!-- Animated burger -->
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+            <span class="burger"></span>
+            <span class="burger"></span>
+            <span class="burger"></span>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="tailor.html">Join as Tailor</a></li>
+            <li><a href="payment.html">Payment</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-card">
+        <img src="images/hero.jpg" alt="Kattankudy Culture" class="hero-image">
+    </div>
+
+    <div class="hero-content">
+        <h1>Discover Kattankudy's Finest Tailors</h1>
+        <p>Fair Prices • Verified Tailors • Easy Orders</p>
+
+        <div class="hero-buttons">
+            <a href="services.html" class="btn-glass">Our Services</a>
+            <a href="tailor.html" class="btn-glass btn-secondary">Join as Tailor</a>
+        </div>
+    </div>
+</section>
+
+    <!-- POPULAR CATEGORIES SECTION -->
+    <section class="section">
+        <div class="section-header">
+            <h2>Popular Categories</h2>
+            <p>Explore our most requested tailoring services</p>
+        </div>
+        <div class="services-grid">
+            <!-- Category 1: Shirts -->
+            <div class="service-card" onclick="location.href='services.html#shirts'">
+                <img src="images/1.jpg" alt="Shirts" class="card-image">
+                <div class="card-content">
+                    <div class="card-icon">👔</div>
+                    <h3>Shirts (Men)</h3>
+                    <p>Formal, casual, and office wear with custom fitting</p>
+                </div>
+            </div>
+
+            <!-- Category 3: Jubba -->
+            <div class="service-card" onclick="location.href='services.html#jubba'">
+                <img src="images/3.jpg" alt="Jubba" class="card-image">
+                <div class="card-content">
+                    <div class="card-icon">🕌</div>
+                    <h3>Jubba / Thobe</h3>
+                    <p>Traditional and modern jubba designs with embroidery</p>
+                </div>
+            </div>
+
+            <!-- Category 4: Abaya -->
+            <div class="service-card" onclick="location.href='services.html#abaya'">
+                <img src="images/4.jpg" alt="Abaya" class="card-image">
+                <div class="card-content">
+                    <div class="card-icon">🧕</div>
+                    <h3>Abaya (Women)</h3>
+                    <p>Elegant abayas for daily wear and special occasions</p>
+                </div>
+            </div>
+
+            <!-- Category 14: Wedding Wear -->
+            <div class="service-card" onclick="location.href='services.html#wedding'">
+                <img src="images/14.jpg" alt="Wedding Wear" class="card-image">
+                <div class="card-content">
+                    <div class="card-icon">💒</div>
+                    <h3>Wedding / Special Wear</h3>
+                    <p>Bridal outfits and special occasion dresses</p>
+                </div>
+            </div>
+
+            <!-- Category 15: Bulk Orders -->
+            <div class="service-card bulk-card" onclick="location.href='services.html#bulk'">
+                <div class="bulk-badge">BULK ORDERS</div>
+                <img src="images/15.jpg" alt="Bulk Orders" class="card-image">
+                <div class="card-content">
+                    <div class="card-icon">📦</div>
+                    <h3>Bulk Orders</h3>
+                    <p>Large quantity orders for organizations</p>
+                    <div class="bulk-features">
+                        <span>✓ Volume Discounts</span>
+                        <span>✓ Sample Approval</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-2">
+            <a href="services.html" class="btn-glass">View All Services</a>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE TAIRO SECTION -->
+    <section class="section">
+        <div class="section-header">
+            <h2>Why Choose Tairo?</h2>
+            <p>Quality craftsmanship meets modern convenience</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <h3>Fair Pricing</h3>
+                <p>Transparent pricing with no hidden costs. Get quality work at honest prices.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">✅</div>
+                <h3>Verified Tailors</h3>
+                <p>All tailors are verified and experienced professionals from Kattankudy.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Fast Orders</h3>
+                <p>Quick turnaround times without compromising on quality craftsmanship.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💬</div>
+                <h3>Easy WhatsApp</h3>
+                <p>Order directly via WhatsApp. Simple, fast, and convenient communication.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="section text-center">
+        <div class="hero-content" style="position: relative; z-index: 1;">
+            <h2 style="color: #7c3aed; margin-bottom: 1rem;">Ready to Get Started?</h2>
+            <p style="color: #666; margin-bottom: 2rem;">Place your order today or join our network of skilled tailors</p>
+            <div class="hero-buttons">
+                <a href="services.html" class="btn-glass">Browse Services</a>
+                <a href="tailor.html" class="btn-glass btn-secondary">Join as Tailor</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="Tairo Logo">
+                    <h3>Tairo</h3>
+                </div>
+                <p>Fair Prices • Verified Tailors • Easy Orders</p>
+                <p>Connecting customers with Kattankudy's finest tailors</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="tailor.html">Join as Tailor</a>
+                <a href="payment.html">Payment</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p>📍 Kattankudy, Eastern Province</p>
+                <p>🇱🇰 Sri Lanka</p>
+                <p>📞 +94 78 441 4956</p>
+                <p>✉️ tairotailor@gmail.com</p>
+            </div>
+            
+         
+         <div class="footer-section">  
+    <h4>Follow Us</h4>  
+    <div style="display: flex; gap: 12px; margin-top: 15px;">  
+        <a href="https://facebook.com/tairo" target="_blank"   
+           style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 10px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: rgba(255, 255, 255, 0.8); font-size: 18px; transition: all 0.3s ease; text-decoration: none;"  
+           onmouseover="this.style.background='#1877f2'; this.style.borderColor='#1877f2'; this.style.color='white'; this.style.transform='translateY(-3px)';"  
+           onmouseout="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderColor='rgba(255, 255, 255, 0.1)'; this.style.color='rgba(255, 255, 255, 0.8)'; this.style.transform='translateY(0)';"  
+           title="Facebook">  
+            <i class="fab fa-facebook-f"></i>  
+        </a>  
+          
+        <a href="https://instagram.com/tairo" target="_blank"   
+           style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 10px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: rgba(255, 255, 255, 0.8); font-size: 18px; transition: all 0.3s ease; text-decoration: none;"  
+           onmouseover="this.style.background='linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)'; this.style.borderColor='#e1306c'; this.style.color='white'; this.style.transform='translateY(-3px)';"  
+           onmouseout="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderColor='rgba(255, 255, 255, 0.1)'; this.style.color='rgba(255, 255, 255, 0.8)'; this.style.transform='translateY(0)';"  
+           title="Instagram">  
+            <i class="fab fa-instagram"></i>  
+        </a>  
+          
+        <a href="https://tiktok.com/@tairo" target="_blank"   
+           style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 10px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: rgba(255, 255, 255, 0.8); font-size: 18px; transition: all 0.3s ease; text-decoration: none;"  
+           onmouseover="this.style.background='#000000'; this.style.borderColor='#00f2ea'; this.style.color='#00f2ea'; this.style.transform='translateY(-3px)';"  
+           onmouseout="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderColor='rgba(255, 255, 255, 0.1)'; this.style.color='rgba(255, 255, 255, 0.8)'; this.style.transform='translateY(0)';"  
+           title="TikTok">  
+            <i class="fab fa-tiktok"></i>  
+        </a>  
+          
+        <a href="https://youtube.com/@tairo" target="_blank"   
+           style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 10px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: rgba(255, 255, 255, 0.8); font-size: 18px; transition: all 0.3s ease; text-decoration: none;"  
+           onmouseover="this.style.background='#ff0000'; this.style.borderColor='#ff0000'; this.style.color='white'; this.style.transform='translateY(-3px)';"  
+           onmouseout="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderColor='rgba(255, 255, 255, 0.1)'; this.style.color='rgba(255, 255, 255, 0.8)'; this.style.transform='translateY(0)';"  
+           title="YouTube">  
+            <i class="fab fa-youtube"></i>  
+        </a>  
+    </div>  
+</div>  
+  
+<div class="footer-bottom">  
+    <p>&copy; 2026 Tairo. All rights reserved. | Empowering women tailors in Kattankudy</p>  
+</div>
+    
+    <div class="menu-backdrop" onclick="toggleMobileMenu()"></div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

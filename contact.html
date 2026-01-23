@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Tairo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+   <!-- NAVBAR -->
+<nav class="navbar">
+    <div class="navbar-container">
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Tairo Logo">
+            <span>Tairo</span>
+        </a>
+
+        <!-- Animated burger -->
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+            <span class="burger"></span>
+            <span class="burger"></span>
+            <span class="burger"></span>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="tailor.html">Join as Tailor</a></li>
+            <li><a href="payment.html">Payment</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <!-- CONTACT SECTION -->
+    <section class="section">
+        <div class="section-header">
+            <h2>Get In Touch</h2>
+            <p>We're here to help with all your tailoring needs</p>
+        </div>
+
+        <!-- CONTACT CARDS -->
+        <div class="contact-grid">
+            <div class="contact-card">
+                <div class="contact-icon">📞</div>
+                <h3>Call Us</h3>
+                <p style="color: #666; margin-bottom: 1rem;">Speak directly with our team</p>
+                <a href="tel:+94784414956" class="btn-glass" style="text-decoration: none; font-size: 0.9rem;">
+                    +94 78 441 4956
+                </a>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-icon">💬</div>
+                <h3>WhatsApp</h3>
+                <p style="color: #666; margin-bottom: 1rem;">Chat with us instantly</p>
+                <a href="https://wa.me/94784414956" target="_blank" class="btn-glass btn-whatsapp" 
+                   style="text-decoration: none; font-size: 0.9rem;">
+                    Chat on WhatsApp
+                </a>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-icon">✉️</div>
+                <h3>Email</h3>
+                <p style="color: #666; margin-bottom: 1rem;">Send us an email</p>
+                <a href="mailto:tairotailor@gmail.com" class="btn-glass" 
+                   style="text-decoration: none; font-size: 0.9rem;">
+                    tairotailor@gmail.com
+                </a>
+            </div>
+        </div>
+
+        <!-- LOCATION MAP -->
+        <div style="margin-top: 4rem;">
+            <h3 style="color: #7c3aed; text-align: center; margin-bottom: 2rem;">Visit Us</h3>
+            <div class="map-container">
+                <iframe 
+                    src="https://maps.app.goo.gl/JvyATdfxNYUXHwBf9" 
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <div style="text-align: center; margin-top: 1rem;">
+                <p style="color: #666;">
+                    <strong style="color: #7c3aed;">📍 Location:</strong> Kattankudy, Eastern Province, Sri Lanka
+                </p>
+            </div>
+        </div>
+
+        <!-- SOCIAL MEDIA -->
+        <div style="margin-top: 4rem;">
+            <h3 style="color: #7c3aed; text-align: center; margin-bottom: 2rem;">Follow Us on Social Media</h3>
+            <div class="social-links" style="justify-content: center; gap: 2rem;">
+                <a href="https://facebook.com" target="_blank" class="social-icon" title="Facebook" style="width: 60px; height: 60px; font-size: 2rem;">
+                    📘
+                </a>
+                <a href="https://instagram.com" target="_blank" class="social-icon" title="Instagram" style="width: 60px; height: 60px; font-size: 2rem;">
+                    📷
+                </a>
+                <a href="https://tiktok.com" target="_blank" class="social-icon" title="TikTok" style="width: 60px; height: 60px; font-size: 2rem;">
+                    🎵
+                </a>
+                <a href="https://youtube.com" target="_blank" class="social-icon" title="YouTube" style="width: 60px; height: 60px; font-size: 2rem;">
+                    ▶️
+                </a>
+            </div>
+        </div>
+
+        <!-- BUSINESS HOURS -->
+        <div style="margin-top: 4rem;">
+            <h3 style="color: #7c3aed; text-align: center; margin-bottom: 2rem;">Business Hours</h3>
+            <div class="bank-details" style="max-width: 600px; margin: 0 auto;">
+                <div class="bank-detail">
+                    <span class="label">Monday - Friday:</span>
+                    <span class="value">9:00 AM - 8:00 PM</span>
+                </div>
+                <div class="bank-detail">
+                    <span class="label">Saturday:</span>
+                    <span class="value">9:00 AM - 6:00 PM</span>
+                </div>
+                <div class="bank-detail">
+                    <span class="label">Sunday:</span>
+                    <span class="value">10:00 AM - 4:00 PM</span>
+                </div>
+                <div class="bank-detail" style="border-bottom: none;">
+                    <span class="label">WhatsApp Support:</span>
+                    <span class="value">24/7 Available</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- QUICK ACTIONS -->
+        <div style="margin-top: 4rem; text-align: center;">
+            <h3 style="color: #7c3aed; margin-bottom: 2rem;">Quick Actions</h3>
+            <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                <a href="services.html" class="btn-glass">Browse Services</a>
+                <a href="tailor.html" class="btn-glass btn-secondary">Join as Tailor</a>
+                <a href="payment.html" class="btn-glass btn-secondary">Make Payment</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="Tairo Logo">
+                    <h3>Tairo</h3>
+                </div>
+                <p>Fair Prices • Verified Tailors • Easy Orders</p>
+                <p>Connecting customers with Kattankudy's finest tailors</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="tailor.html">Join as Tailor</a>
+                <a href="payment.html">Payment</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p>📍 Kattankudy, Eastern Province</p>
+                <p>🇱🇰 Sri Lanka</p>
+                <p>📞 +94 78 441 4956</p>
+                <p>✉️ tairotailor@gmail.com</p>
+            </div>
+            
+           <div class="footer-section">  
+    <h4>Follow Us</h4>  
+    <div style="display: flex; gap: 12px; margin-top: 15px;">  
+        <a href="https://facebook.com/tairo" target="_blank"   
+           style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 10px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: rgba(255, 255, 255, 0.8); font-size: 18px; transition: all 0.3s ease; text-decoration: none;"  
+           onmouseover="this.style.background='#1877f2'; this.style.borderColor='#1877f2'; this.style.color='white'; this.style.transform='translateY(-3px)';"  
+           onmouseout="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderColor='rgba(255, 255, 255, 0.1)'; this.style.color='rgba(255, 255, 255, 0.8)'; this.style.transform='translateY(0)';"  
+           title="Facebook">  
+            <i class="fab fa-facebook-f"></i>  
+        </a>  
+          
+        <a href="https://instagram.com/tairo" target="_blank"   
+           style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 10px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: rgba(255, 255, 255, 0.8); font-size: 18px; transition: all 0.3s ease; text-decoration: none;"  
+           onmouseover="this.style.background='linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)'; this.style.borderColor='#e1306c'; this.style.color='white'; this.style.transform='translateY(-3px)';"  
+           onmouseout="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderColor='rgba(255, 255, 255, 0.1)'; this.style.color='rgba(255, 255, 255, 0.8)'; this.style.transform='translateY(0)';"  
+           title="Instagram">  
+            <i class="fab fa-instagram"></i>  
+        </a>  
+          
+        <a href="https://tiktok.com/@tairo" target="_blank"   
+           style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 10px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: rgba(255, 255, 255, 0.8); font-size: 18px; transition: all 0.3s ease; text-decoration: none;"  
+           onmouseover="this.style.background='#000000'; this.style.borderColor='#00f2ea'; this.style.color='#00f2ea'; this.style.transform='translateY(-3px)';"  
+           onmouseout="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderColor='rgba(255, 255, 255, 0.1)'; this.style.color='rgba(255, 255, 255, 0.8)'; this.style.transform='translateY(0)';"  
+           title="TikTok">  
+            <i class="fab fa-tiktok"></i>  
+        </a>  
+          
+        <a href="https://youtube.com/@tairo" target="_blank"   
+           style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 10px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: rgba(255, 255, 255, 0.8); font-size: 18px; transition: all 0.3s ease; text-decoration: none;"  
+           onmouseover="this.style.background='#ff0000'; this.style.borderColor='#ff0000'; this.style.color='white'; this.style.transform='translateY(-3px)';"  
+           onmouseout="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderColor='rgba(255, 255, 255, 0.1)'; this.style.color='rgba(255, 255, 255, 0.8)'; this.style.transform='translateY(0)';"  
+           title="YouTube">  
+            <i class="fab fa-youtube"></i>  
+        </a>  
+    </div>  
+</div>  
+  
+<div class="footer-bottom">  
+    <p>&copy; 2026 Tairo. All rights reserved. | Empowering women tailors in Kattankudy</p>  
+</div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Tairo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+   <!-- NAVBAR -->
+<nav class="navbar">
+    <div class="navbar-container">
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Tairo Logo">
+            <span>Tairo</span>
+        </a>
+
+        <!-- Animated burger -->
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+            <span class="burger"></span>
+            <span class="burger"></span>
+            <span class="burger"></span>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="tailor.html">Join as Tailor</a></li>
+            <li><a href="payment.html">Payment</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <!-- SERVICES HEADER -->
+    <section class="section">
+        <div class="section-header">
+            <h2>Our Tailoring Services</h2>
+            <p>Choose from our comprehensive range of professional tailoring services</p>
+        </div>
+
+        <!-- ALL 16 CATEGORIES -->
+        <div class="services-grid" id="servicesGrid">
+            <!-- 1. SHIRTS (MEN) -->
+            <div class="service-card" onclick="showSubcategories('shirts')" id="shirts">
+                <img src="images/1.jpg" alt="Shirts" class="card-image">
+                <div class="card-content">
+                    <div class="card-icon">👔</div>
+                    <h3>Shirts (Men)</h3>
+                    <p>Formal, casual, and office wear</p>
+                    <button class="btn-glass" style="width: 100%; margin-top: 0.5rem;">View Options</button>
+                </div>
+            </div>
+
+            <!-- 2. PANTS / TROUSERS -->
+            <div class="service-card" onclick="showSubcategories('pants')" id="pants">
+                <img src="images/2.jpg" alt="Pants" class="card-image">
+                <div class="card-content">
+                    <div class="card-icon">👖</div>
+                    <h3>Pants / Trousers (Men)</h3>
+                    <p>All types of formal and casual pants</p>
+                    <button class="btn-glass" style="width: 100%; margin-top: 0.5rem;">View Options</button>
+                </div>
+            </div>
+
+            <!-- 3. JUBBA / THOBE -->
+            <div class="service-card" onclick="showSubcategories('jubba')" id="jubba">
+                <img src="images/3.jpg" alt="Jubba" class="card-image">
+                <div class="card-content">
+                    <div class="card-icon">🕌</div>
+                    <h3>Jubba / Thobe (Men)</h3>
+                    <p>Traditional and modern jubba designs</p>
+                    <button class="btn-glass" style="width: 100%; margin-top: 0.5rem;">View Options</button>
+                </div>
+            </div>
+
+            <!-- 4. ABAYA -->
+            <div class="service-card" onclick="showSubcategories('abaya')" id="abaya">
+                <img src="images/4.jpg" alt="Abaya" class="card-image">
+                <div class="card-content">
+                    <div class="card-icon">🧕</div>
+                    <h3>Abaya (Women)</h3>
+                    <p>Daily wear and party abayas</p>
+                    <button class="btn-glass" style="width: 100%; margin-top: 0.5rem;">View Options</button>
+                </div>
+            </div>
+
+            <!-- 5. FROCK -->
+            <div class="service-card" onclick="showSubcategories('frock')" id="frock">
+                <img src="images/5.jpg" alt="Frock" class="card-image">
+                <div class="card-content">
+                    <div class="card-icon">👗</div>
+                    <h3>Frock (Women/Kids)</h3>
+                    <p>Party, casual, and layered frocks</p>
+                    <button class="btn-glass" style="width: 100%; margin-top: 0.5rem;">View Options</button>
+                </div>
+            </div>
+
+            <!-- 6. SAREE BLOUSE -->
+            <div class="service-card" onclick="showSubcategories('blouse')" id="blouse">
+                <img src="images/6.jpg" alt="Saree Blouse" class="card-image">
+                <div class="card-content">
+                    <div class="card-icon">👚</div>
+                    <h3>Saree Blouse (Women)</h3>
+                    <p>Designer and wedding blouses</p>
+                    <button class="btn-glass" style="width: 100%; margin-top: 0.5rem;">View Options</button>
+                </div>
+            </div>
+
+            <!-- 7. SALWAR -->
+            <div class="service-card" onclick="showSubcategories('salwar')" id="salwar">
+                <img src="images/7.jpg" alt="Salwar" class="card-image">
+                <div class="card-content">
+                    <div class="card-icon">👘</div>
+                    <h3>Salwar / Shalwar (Women)</h3>
+                    <p>Traditional and Pakistani salwar</p>
+                    <button class="btn-glass" style="width: 100%; margin-top: 0.5rem;">View Options</button>
+                </div>
+            </div>
+
+            <!-- 8. SKIRTS -->
+            <div class="service-card" onclick="showSubcategories('skirts')" id="skirts">
+                <img src="images/8.jpg" alt="Skirts" class="card-image">
+                <div class="card-content">
+                    <div class="card-icon">👗</div>
+                    <h3>Skirts (Women)</h3>
+                    <p>Long, short, and pleated skirts</p>
+                    <button class="btn-glass" style="width: 100%; margin-top: 0.5rem;">View Options</button>
+                </div>
+            </div>
+
+            <!-- 9. TOPS -->
+            <div class="service-card" onclick="showSubcategories('tops')" id="tops">
+                <img src="images/9.jpg" alt="Tops" class="card-image">
+                <div class="card-content">
+                    <div class="card-icon">👚</div>
+                    <h3>Tops (Women)</h3>
+                    <p>Casual, office, and party tops</p>
+                    <button class="btn-glass" style="width: 100%; margin-top: 0.5rem;">View Options</button>
+                </div>
+            </div>
+
+            <!-- 10. SCHOOL UNIFORMS -->
+            <div class="service-card" onclick="showSubcategories('school')" id="school">
+                <img src="images/10.jpg" alt="School Uniforms" class="card-image">
+                <div class="card-content">
+                    <div class="card-icon">🎓</div>
+                    <h3>School Uniforms</h3>
+                    <p>Boys and girls uniforms with badges</p>
+                    <button class="btn-glass" style="width: 100%; margin-top: 0.5rem;">View Options</button>
+                </div>
+            </div>
+
+            <!-- 11. KIDS WEAR -->
+            <div class="service-card" onclick="showSubcategories('kids')" id="kids">
+                <img src="images/11.jpg" alt="Kids Wear" class="card-image">
+                <div class="card-content">
+                    <div class="card-icon">👶</div>
+                    <h3>Kids Wear</h3>
+                    <p>Birthday dresses and daily wear</p>
+                    <button class="btn-glass" style="width: 100%; margin-top: 0.5rem;">View Options</button>
+                </div>
+            </div>
+
+            <!-- 12. BAGS & ACCESSORIES -->
+            <div class="service-card" onclick="showSubcategories('bags')" id="bags">
+                <img src="images/12.jpg" alt="Bags" class="card-image">
+                <div class="card-content">
+                    <div class="card-icon">👜</div>
+                    <h3>Bags & Accessories</h3>
+                    <p>Hand bags, tote bags, and pouches</p>
+                    <button class="btn-glass" style="width: 100%; margin-top: 0.5rem;">View Options</button>
+                </div>
+            </div>
+
+            <!-- 13. ALTERATIONS & REPAIRS -->
+            <div class="service-card" onclick="showSubcategories('alterations')" id="alterations">
+                <img src="images/13.jpg" alt="Alterations" class="card-image">
+                <div class="card-content">
+                    <div class="card-icon">✂️</div>
+                    <h3>Alterations & Repairs</h3>
+                    <p>All types of clothing repairs</p>
+                    <button class="btn-glass" style="width: 100%; margin-top: 0.5rem;">View Options</button>
+                </div>
+            </div>
+
+            <!-- 14. WEDDING / SPECIAL WEAR -->
+            <div class="service-card" onclick="showSubcategories('wedding')" id="wedding">
+                <img src="images/14.jpg" alt="Wedding Wear" class="card-image">
+                <div class="card-content">
+                    <div class="card-icon">💒</div>
+                    <h3>Wedding / Special Wear</h3>
+                    <p>Bridal and groom outfits</p>
+                    <button class="btn-glass" style="width: 100%; margin-top: 0.5rem;">View Options</button>
+                </div>
+            </div>
+
+            <!-- 15. BULK ORDERS - UNIQUE PURPLE BORDER STYLING -->
+            <div class="service-card bulk-card" onclick="showSubcategories('bulk')" id="bulk">
+                <div class="bulk-badge">BULK ORDERS</div>
+                <img src="images/15.jpg" alt="Bulk Orders" class="card-image">
+                <div class="card-content">
+                    <div class="card-icon">📦</div>
+                    <h3>Bulk Orders</h3>
+                    <p>Large quantity orders for organizations</p>
+                    <div class="bulk-features">
+                        <span>✓ Volume Discounts</span>
+                        <span>✓ Sample Approval</span>
+                    </div>
+                    <button class="btn-glass" style="width: 100%; margin-top: 0.5rem;">Request Quote</button>
+                </div>
+            </div>
+
+            <!-- 16. CUSTOM DESIGN - UNIQUE GRADIENT BORDER STYLING -->
+            <div class="service-card custom-card" onclick="showSubcategories('custom')" id="custom">
+                <div class="custom-badge">CUSTOM DESIGN</div>
+                <img src="images/16.jpg" alt="Custom Design" class="card-image">
+                <div class="card-content">
+                    <div class="card-icon">🎨</div>
+                    <h3>Custom Design</h3>
+                    <p>Bring your unique design to life</p>
+                    <div class="custom-features">
+                        <span>✨ Unique Designs</span>
+                        <span>💡 Design Consultation</span>
+                    </div>
+                    <button class="btn-glass" style="width: 100%; margin-top: 0.5rem;">Start Custom</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUBCATEGORY MODAL -->
+    <div class="modal" id="subcategoryModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Select Service Type</h2>
+                <button class="close-modal" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="subcategory-grid" id="subcategoryGrid"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ORDER FORM MODAL -->
+    <div class="modal" id="orderModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="orderModalTitle">Place Your Order</h2>
+                <button class="close-modal" onclick="closeOrderModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="orderForm" onsubmit="submitOrder(event)">
+                    <div id="orderFormFields"></div>
+                    <button type="submit" class="btn-glass btn-whatsapp" style="width: 100%; margin-top: 1rem;">
+                        Submit Order on WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="Tairo Logo">
+                    <h3>Tairo</h3>
+                </div>
+                <p>Fair Prices • Verified Tailors • Easy Orders</p>
+                <p>Connecting customers with Kattankudy's finest tailors</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="tailor.html">Join as Tailor</a>
+                <a href="payment.html">Payment</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p>📍 Kattankudy, Eastern Province</p>
+                <p>🇱🇰 Sri Lanka</p>
+                <p>📞 +94 78 441 4956</p>
+                <p>✉️ tairotailor@gmail.com</p>
+            </div>
+            
+           <div class="footer-section">  
+    <h4>Follow Us</h4>  
+    <div style="display: flex; gap: 12px; margin-top: 15px;">  
+        <a href="https://facebook.com/tairo" target="_blank"   
+           style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 10px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: rgba(255, 255, 255, 0.8); font-size: 18px; transition: all 0.3s ease; text-decoration: none;"  
+           onmouseover="this.style.background='#1877f2'; this.style.borderColor='#1877f2'; this.style.color='white'; this.style.transform='translateY(-3px)';"  
+           onmouseout="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderColor='rgba(255, 255, 255, 0.1)'; this.style.color='rgba(255, 255, 255, 0.8)'; this.style.transform='translateY(0)';"  
+           title="Facebook">  
+            <i class="fab fa-facebook-f"></i>  
+        </a>  
+          
+        <a href="https://instagram.com/tairo" target="_blank"   
+           style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 10px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: rgba(255, 255, 255, 0.8); font-size: 18px; transition: all 0.3s ease; text-decoration: none;"  
+           onmouseover="this.style.background='linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)'; this.style.borderColor='#e1306c'; this.style.color='white'; this.style.transform='translateY(-3px)';"  
+           onmouseout="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderColor='rgba(255, 255, 255, 0.1)'; this.style.color='rgba(255, 255, 255, 0.8)'; this.style.transform='translateY(0)';"  
+           title="Instagram">  
+            <i class="fab fa-instagram"></i>  
+        </a>  
+          
+        <a href="https://tiktok.com/@tairo" target="_blank"   
+           style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 10px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: rgba(255, 255, 255, 0.8); font-size: 18px; transition: all 0.3s ease; text-decoration: none;"  
+           onmouseover="this.style.background='#000000'; this.style.borderColor='#00f2ea'; this.style.color='#00f2ea'; this.style.transform='translateY(-3px)';"  
+           onmouseout="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderColor='rgba(255, 255, 255, 0.1)'; this.style.color='rgba(255, 255, 255, 0.8)'; this.style.transform='translateY(0)';"  
+           title="TikTok">  
+            <i class="fab fa-tiktok"></i>  
+        </a>  
+          
+        <a href="https://youtube.com/@tairo" target="_blank"   
+           style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 10px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: rgba(255, 255, 255, 0.8); font-size: 18px; transition: all 0.3s ease; text-decoration: none;"  
+           onmouseover="this.style.background='#ff0000'; this.style.borderColor='#ff0000'; this.style.color='white'; this.style.transform='translateY(-3px)';"  
+           onmouseout="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderColor='rgba(255, 255, 255, 0.1)'; this.style.color='rgba(255, 255, 255, 0.8)'; this.style.transform='translateY(0)';"  
+           title="YouTube">  
+            <i class="fab fa-youtube"></i>  
+        </a>  
+    </div>  
+</div>  
+  
+<div class="footer-bottom">  
+    <p>&copy; 2026 Tairo. All rights reserved. | Empowering women tailors in Kattankudy</p>  
+</div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

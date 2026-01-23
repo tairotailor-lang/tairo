@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Tairo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="navbar-container">
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Tairo Logo">
+            <span>Tairo</span>
+        </a>
+
+        <!-- Animated burger -->
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+            <span class="burger"></span>
+            <span class="burger"></span>
+            <span class="burger"></span>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="tailor.html">Join as Tailor</a></li>
+            <li><a href="payment.html">Payment</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <!-- PAYMENT SECTION -->
+    <section class="section">
+        <div class="section-header">
+            <h2>Payment Portal</h2>
+            <p>Make your payment and submit proof easily</p>
+        </div>
+
+        <!-- BANK TRANSFER DETAILS -->
+        <div class="bank-details">
+            <h3 style="color: #7c3aed; margin-bottom: 1.5rem; text-align: center;">Bank Transfer Details</h3>
+            
+            <div class="bank-detail">
+                <div>
+                    <span class="label">Bank Name:</span>
+                    <span class="value">HNB Bank</span>
+                </div>
+                <button class="copy-btn" onclick="copyToClipboard('HNB Bank', this)">Copy</button>
+            </div>
+
+            <div class="bank-detail">
+                <div>
+                    <span class="label">Account Number:</span>
+                    <span class="value">250020397954</span>
+                </div>
+                <button class="copy-btn" onclick="copyToClipboard('250020397954', this)">Copy</button>
+            </div>
+
+            <div class="bank-detail">
+                <div>
+                    <span class="label">Account Name:</span>
+                    <span class="value">MOHAMED MI I</span>
+                </div>
+                <button class="copy-btn" onclick="copyToClipboard('MOHAMED MI I', this)">Copy</button>
+            </div>
+
+            <div class="bank-detail">
+                <div>
+                    <span class="label">Branch:</span>
+                    <span class="value">Kattankudy</span>
+                </div>
+                <button class="copy-btn" onclick="copyToClipboard('Kattankudy', this)">Copy</button>
+            </div>
+        </div>
+
+        <!-- CONTACT DETAILS -->
+        <div class="bank-details" style="margin-top: 2rem;">
+            <h3 style="color: #7c3aed; margin-bottom: 1.5rem; text-align: center;">Contact Details</h3>
+            
+            <div class="bank-detail">
+                <div>
+                    <span class="label">WhatsApp:</span>
+                    <span class="value">+94 78 441 4956</span>
+                </div>
+                <button class="copy-btn" onclick="copyToClipboard('+94 78 441 4956', this)">Copy</button>
+            </div>
+
+            <div class="bank-detail">
+                <div>
+                    <span class="label">Email:</span>
+                    <span class="value">tairotailor@gmail.com</span>
+                </div>
+                <button class="copy-btn" onclick="copyToClipboard('tairotailor@gmail.com', this)">Copy</button>
+            </div>
+        </div>
+
+        <!-- PAYMENT PROOF SUBMISSION -->
+        <div class="form-container" style="margin-top: 3rem;">
+            <h3 style="color: #7c3aed; margin-bottom: 1rem; text-align: center;">Submit Payment Proof</h3>
+            <p style="text-align: center; color: #666; margin-bottom: 2rem;">
+                After making the payment, submit your proof via WhatsApp
+            </p>
+
+            <form id="paymentProofForm" onsubmit="submitPaymentProof(event)">
+                <div class="form-group">
+                    <label for="paymentName">Your Name *</label>
+                    <input type="text" id="paymentName" name="name" required placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group">
+                    <label for="paymentWhatsApp">WhatsApp Number *</label>
+                    <input type="tel" id="paymentWhatsApp" name="whatsapp" required 
+                           pattern="[0-9]{10}" placeholder="0784414956">
+                    <small style="color: #666;">10-digit mobile number</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="paymentAmount">Payment Amount (Optional)</label>
+                    <input type="text" id="paymentAmount" name="amount" placeholder="e.g., Rs. 5000">
+                </div>
+
+                <div class="form-group">
+                    <label for="paymentDescription">Description / Order Reference (Optional)</label>
+                    <textarea id="paymentDescription" name="description" 
+                              placeholder="e.g., Payment for Order #123 - Shirts"></textarea>
+                </div>
+
+                <div style="background: #fef3c7; border: 1px solid #fbbf24; border-radius: 0.75rem; padding: 1rem; margin-bottom: 1.5rem;">
+                    <p style="color: #92400e; font-weight: 600; margin-bottom: 0.5rem;">📸 Important:</p>
+                    <p style="color: #92400e; font-size: 0.9rem;">
+                        After clicking the button below, WhatsApp will open. Please attach your payment screenshot before sending the message.
+                    </p>
+                </div>
+
+                <button type="submit" class="btn-glass btn-whatsapp" style="width: 100%; padding: 1.25rem;">
+                    Submit Proof on WhatsApp
+                </button>
+            </form>
+        </div>
+
+        <!-- PAYMENT INSTRUCTIONS -->
+        <div style="margin-top: 3rem;">
+            <h3 style="color: #7c3aed; text-align: center; margin-bottom: 2rem;">Payment Instructions</h3>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">1️⃣</div>
+                    <h3>Make Transfer</h3>
+                    <p>Transfer the payment amount to the bank account details provided above</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">2️⃣</div>
+                    <h3>Take Screenshot</h3>
+                    <p>Take a clear screenshot of your transaction or payment receipt</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">3️⃣</div>
+                    <h3>Fill Form</h3>
+                    <p>Fill the form above with your details and order reference</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">4️⃣</div>
+                    <h3>Submit on WhatsApp</h3>
+                    <p>Click the button to open WhatsApp and attach your payment screenshot</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COPY FEEDBACK -->
+    <div class="copy-feedback" id="copyFeedback">Copied to clipboard!</div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="Tairo Logo">
+                    <h3>Tairo</h3>
+                </div>
+                <p>Fair Prices • Verified Tailors • Easy Orders</p>
+                <p>Connecting customers with Kattankudy's finest tailors</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="tailor.html">Join as Tailor</a>
+                <a href="payment.html">Payment</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p>📍 Kattankudy, Eastern Province</p>
+                <p>🇱🇰 Sri Lanka</p>
+                <p>📞 +94 78 441 4956</p>
+                <p>✉️ tairotailor@gmail.com</p>
+            </div>
+            
+          <div class="footer-section">  
+    <h4>Follow Us</h4>  
+    <div style="display: flex; gap: 12px; margin-top: 15px;">  
+        <a href="https://facebook.com/tairo" target="_blank"   
+           style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 10px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: rgba(255, 255, 255, 0.8); font-size: 18px; transition: all 0.3s ease; text-decoration: none;"  
+           onmouseover="this.style.background='#1877f2'; this.style.borderColor='#1877f2'; this.style.color='white'; this.style.transform='translateY(-3px)';"  
+           onmouseout="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderColor='rgba(255, 255, 255, 0.1)'; this.style.color='rgba(255, 255, 255, 0.8)'; this.style.transform='translateY(0)';"  
+           title="Facebook">  
+            <i class="fab fa-facebook-f"></i>  
+        </a>  
+          
+        <a href="https://instagram.com/tairo" target="_blank"   
+           style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 10px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: rgba(255, 255, 255, 0.8); font-size: 18px; transition: all 0.3s ease; text-decoration: none;"  
+           onmouseover="this.style.background='linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)'; this.style.borderColor='#e1306c'; this.style.color='white'; this.style.transform='translateY(-3px)';"  
+           onmouseout="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderColor='rgba(255, 255, 255, 0.1)'; this.style.color='rgba(255, 255, 255, 0.8)'; this.style.transform='translateY(0)';"  
+           title="Instagram">  
+            <i class="fab fa-instagram"></i>  
+        </a>  
+          
+        <a href="https://tiktok.com/@tairo" target="_blank"   
+           style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 10px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: rgba(255, 255, 255, 0.8); font-size: 18px; transition: all 0.3s ease; text-decoration: none;"  
+           onmouseover="this.style.background='#000000'; this.style.borderColor='#00f2ea'; this.style.color='#00f2ea'; this.style.transform='translateY(-3px)';"  
+           onmouseout="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderColor='rgba(255, 255, 255, 0.1)'; this.style.color='rgba(255, 255, 255, 0.8)'; this.style.transform='translateY(0)';"  
+           title="TikTok">  
+            <i class="fab fa-tiktok"></i>  
+        </a>  
+          
+        <a href="https://youtube.com/@tairo" target="_blank"   
+           style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 10px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: rgba(255, 255, 255, 0.8); font-size: 18px; transition: all 0.3s ease; text-decoration: none;"  
+           onmouseover="this.style.background='#ff0000'; this.style.borderColor='#ff0000'; this.style.color='white'; this.style.transform='translateY(-3px)';"  
+           onmouseout="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderColor='rgba(255, 255, 255, 0.1)'; this.style.color='rgba(255, 255, 255, 0.8)'; this.style.transform='translateY(0)';"  
+           title="YouTube">  
+            <i class="fab fa-youtube"></i>  
+        </a>  
+    </div>  
+</div>  
+  
+<div class="footer-bottom">  
+    <p>&copy; 2026 Tairo. All rights reserved. | Empowering women tailors in Kattankudy</p>  
+</div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
