@@ -3,7 +3,7 @@
   "short_name": "Tairo",
   "start_url": "/tairo/",
   "scope": "/tairo/",
-  "display": "fullscreen",
+  "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",
   "icons": [
@@ -14,4 +14,5 @@
     }
   ]
 }
+
 
